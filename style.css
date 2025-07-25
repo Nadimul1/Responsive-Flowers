@@ -1,0 +1,592 @@
+/* General Styling */
+:root {  
+    --text-color: #333;
+    --secondary-text-color: #666;
+    --card-bg: #fff;
+    --button-bg: #4CAF50;
+    --button-text: #fff;
+    --border-color: #ddd;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: #f5f8ff; 
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--text-color);
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+h3 {
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+.button {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0ef119;
+}
+
+/* 1. Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo-img {
+    height: 71px; 
+    width: auto;
+    vertical-align: middle;
+}
+
+.navbar .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .menu li {
+    margin-left: 30px;
+}
+
+
+.navbar .menu a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu a:hover {
+    color: var(--primary-green);
+}
+
+.navbar .cart-icon {
+    margin-left: 20px;
+    width: 24px; 
+    height: 24px;
+    vertical-align: middle;
+}
+
+.navbar .mobile-cart-name {
+    display: none; 
+    margin-left: 5px;
+    font-weight: 700;
+}
+
+.navbar .right-mobile-nav {
+    display: none; 
+}
+
+/* 2. Banner */
+.banner {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 80px 0;
+    
+}
+.clr{
+    color: #E95A08;
+}
+.banner-content {
+    flex: 1;
+}
+
+.banner-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 0.5em;
+}
+
+.banner-content p {
+    font-size: 1.1em;
+    color: var(--secondary-text-color);
+    margin-bottom: 1.5em;
+}
+
+.banner-image {
+    flex: 1;
+    text-align: right;
+}
+
+.banner-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    
+}
+
+/* 3. Plants Section */
+.plants-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.plants-section .section-header {
+    margin-bottom: 60px;
+}
+
+.plants-section .section-header h2 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+}
+
+.plants-section .section-header p {
+    font-size: 1.2em;
+    color: var(--secondary-text-color);
+}
+
+.plants-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.plant-card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.plant-card:hover {
+    transform: translateY(-5px);
+}
+
+.plant-card img {
+    max-width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.plant-card h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.plant-card .price {
+    font-size: 1.2em;
+    color: var(--primary-green);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+/* 4. Plants Lover Section */
+.plants-lover-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 80px 0;
+    position: relative;
+}
+
+.plants-lover-image {
+    flex: 1;
+    position: relative; 
+}
+
+.plants-lover-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.trusted-badge {
+    
+    position: absolute;
+    top: 0px;
+    left: 380px; 
+    
+}
+.trusted-badge img {
+    max-width: 100%;
+    height: auto;
+    width: 250px; 
+    align-items: center;
+}
+
+.plants-lover-content {
+    flex: 1;
+}
+
+.plants-lover-content h2 {
+    font-size: 2.8em;
+    margin-bottom: 0.5em;
+}
+
+.plants-lover-content ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.plants-lover-content ul li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+    color: var(--secondary-text-color);
+}
+
+.plants-lover-content ul li::before {
+    content: '🌿'; 
+    position: absolute;
+    left: 0;
+    color: var(--primary-green);
+    font-size: 1.2em;
+    line-height: 1;
+}
+
+/* 5. Join Section */
+.join-section {
+    padding: 100px 0;
+    text-align: center;
+    background-image: url(news-letter-bg.png); 
+    background-size: cover;
+    background-position: center;
+    color: var(--button-text); 
+    position: relative;
+    z-index: 0;
+}
+
+.join-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: -1;
+}
+
+.join-section h2 {
+    font-size: 3em;
+    margin-bottom: 40px;
+    color: var(--button-text);
+}
+
+.join-form {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.join-form input[type="email"] {
+    flex-grow: 1;
+    padding: 15px 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1em;
+    outline: none;
+}
+
+.join-form .button {
+    padding: 15px 30px;
+}
+
+/* 6. Footer Section */
+.footer {
+   
+    color: #f5f8ff; 
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; 
+    text-align: center; 
+}
+
+.footer .logo-img {
+    height: 82px; 
+    width: auto;
+    vertical-align: middle;
+}
+
+.footer-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+}
+
+.footer-links li {
+    margin: 0 15px; 
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #6B7280; 
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #E95A08; 
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px; 
+}
+
+.social-icons .social-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons .social-icon:hover {
+    transform: scale(1.1);
+}
+
+
+/* Challenges Part */
+/* Latest Deal Section */
+.latest-deal-section {
+    padding: 80px 0;
+    text-align: center;
+    background-color: var(--light-green);
+}
+
+.latest-deal-section .section-header {
+    margin-bottom: 60px;
+}
+
+.latest-deal-section .section-header h2 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+}
+
+.latest-deal-section .section-header p {
+    font-size: 1.2em;
+    color: var(--secondary-text-color);
+}
+
+.latest-deal-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+    justify-content: center;
+}
+
+.deal-card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.deal-card:hover {
+    transform: translateY(-5px);
+}
+
+.deal-card img {
+    max-width: 100%;
+    height: 220px; 
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.deal-card h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    flex-grow: 1; 
+}
+
+.deal-card .original-price {
+    text-decoration: line-through;
+    color: var(--secondary-text-color);
+    font-size: 0.9em;
+    margin-right: 10px;
+}
+
+.deal-card .discounted-price {
+    color: #D32F2F; 
+    font-weight: 700;
+    font-size: 1.2em;
+}
+.deal-card .prices {
+    margin-bottom: 15px;
+}
+
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    /* Navbar Mobile */
+    .navbar .menu {
+        display: none; 
+    }
+
+    .navbar {
+        justify-content: space-between; 
+    }
+
+    .navbar .right-mobile-nav {
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar .mobile-cart-name {
+        display: inline-block; 
+        margin-right: 5px; 
+        color: var(--text-color);
+    }
+
+    /* Banner Mobile */
+    .banner {
+        flex-direction: column; 
+        padding: 40px 0;
+    }
+
+    .banner-image {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .banner-content {
+        text-align: left; 
+    }
+
+    .banner-content h1 {
+        font-size: 2.5em;
+    }
+
+    /* Plants Section Mobile */
+    .plants-cards {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    /* Plants Lover Section Mobile */
+    .plants-lover-section {
+        flex-direction: column; 
+        padding: 40px 0;
+    }
+
+    .plants-lover-image {
+        margin-bottom: 30px; 
+    }
+
+    .plants-lover-content {
+        text-align: left; 
+    }
+
+    .trusted-badge {
+        display: none; 
+    }
+
+    /* Join Section Mobile */
+    .join-section {
+        padding: 50px 0;
+    }
+
+    .join-section h2 {
+        font-size: 2em;
+    }
+
+    .join-form {
+        flex-direction: column; 
+        gap: 10px;
+        max-width: 90%;
+    }
+
+    .join-form input[type="email"],
+    .join-form .button {
+        width: 100%;
+        box-sizing: border-box; 
+    }
+
+    /* Footer Mobile */
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-links li {
+        margin: 0; 
+    .social-icons {
+        margin-top: 20px; 
+    }
+
+
+    /* Latest Deal Section Mobile */
+    .latest-deal-cards {
+        grid-template-columns: 1fr; 
+    }
+
+    .deal-card {
+        max-width: 350px; 
+        margin: 0 auto; 
+    }
+}
+
+@media (max-width: 480px) {
+     /* Plants Section Mobile - Smaller screens */
+    .plants-cards {
+        grid-template-columns: 1fr; 
+    }
+}
+}
